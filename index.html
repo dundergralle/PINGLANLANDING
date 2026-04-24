@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<title>Ciara</title>
+<title>DITT NAMN HÄR</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { height: 100%; }
@@ -64,19 +64,23 @@
     min-height: 100%;
     min-height: 100dvh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100dvh;
     padding: 2rem 1.5rem;
     padding-top: max(2rem, env(safe-area-inset-top));
     padding-bottom: max(2rem, env(safe-area-inset-bottom));
     padding-left: max(1.5rem, env(safe-area-inset-left));
     padding-right: max(1.5rem, env(safe-area-inset-right));
-    text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    position: relative;
-    z-index: 2;
   }
 
   .avatar {
@@ -191,26 +195,28 @@ if (window.location.pathname === '/link') {
 <div class="overlay"></div>
 
 <!-- Content -->
-<img class="avatar" src="YOUR_PROFILE_IMAGE_URL_HERE" alt="Profile" onerror="this.style.background='rgba(255,255,255,0.3)';this.removeAttribute('src')">
+<div class="content">
+  <img class="avatar" src="YOUR_PROFILE_IMAGE_URL_HERE" alt="Profile" onerror="this.style.background='rgba(255,255,255,0.3)';this.removeAttribute('src')">
 
-<h1>DITT NAMN HÄR</h1>
-<p class="tagline">DIN BESKRIVNING HÄR</p>
+  <h1>DITT NAMN HÄR</h1>
+  <p class="tagline">DIN BESKRIVNING HÄR</p>
 
-<div class="location-pill">
-  <span class="dot"></span>
-  <span id="loc-text">5 minutes ago in: ...</span>
-</div>
+  <div class="location-pill">
+    <span class="dot"></span>
+    <span id="loc-text">5 minutes ago in: ...</span>
+  </div>
 
-<div class="buttons">
-  <a class="btn" href="/link" target="_blank">Knapp 1</a>
-  <a class="btn" href="YOUR_URL_2_HERE" target="_blank">Knapp 2</a>
-  <a class="btn" href="YOUR_URL_3_HERE" target="_blank">Knapp 3</a>
+  <div class="buttons">
+    <a class="btn" href="/link" target="_blank">Knapp 1</a>
+    <a class="btn" href="YOUR_URL_2_HERE" target="_blank">Knapp 2</a>
+    <a class="btn" href="YOUR_URL_3_HERE" target="_blank">Knapp 3</a>
+  </div>
 </div>
 
 <script>
 // Inject background images into both columns
 (function() {
-  var imgSrc = 'https://github.com/dundergralle/PINGLANLANDING/blob/main/New%20Project%20(32).jpg?raw=true';
+  var imgSrc = 'https://raw.githubusercontent.com/DITT-NAMN/DITT-REPO/main/photo.jpg';
   ['strip-left', 'strip-right'].forEach(function(id) {
     var strip = document.getElementById(id);
     for (var i = 0; i < 4; i++) {
@@ -251,5 +257,4 @@ if (window.location.pathname === '/link') {
 </script>
 
 </body>
-</html>
 </html>
